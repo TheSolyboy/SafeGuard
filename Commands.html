@@ -31,8 +31,8 @@
           <!-- You can change the href value and the text value -->
           <div class="navs-item notbtn"><a href="Commands.html" class="txt-uppercase">Commands</a></div>
           <div class="navs-item notbtn"><a href="#" class="txt-uppercase">Docs</a></div>
-          <div class="navs-item notbtn"><a href="#" class="txt-uppercase">Support</a></div>
-          <div class="navs-item notbtn"><a href="#" class="txt-uppercase">Invite</a></div>
+          <div class="navs-item notbtn"><a href="https://discord.gg/d8RUk3KwWY" class="txt-uppercase">Support</a></div>
+          <div class="navs-item notbtn"><a href="https://discord.com/oauth2/authorize?client_id=1300829841561485506&permissions=1154482847612151&integration_type=0&scope=bot" class="txt-uppercase">Invite</a></div>
           <div class="navs-item"><a href="#"><button class="btn txt-uppercase shadow-sm">Login</button></a></div>
         </div>
       </div>
@@ -51,9 +51,9 @@
                     
                         <button onclick="active(this)" id="CategoryBtn1" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-globe-europe ttt'></i>&nbsp; General Commands</button>
                     
-                        <button onclick="active(this)" id="CategoryBtn2" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-hammer-war ttt'></i>&nbsp;&nbsp; Leveling Commands</button>
+                        <button onclick="active(this)" id="CategoryBtn2" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fa-hammer-war ttt'></i>&nbsp;&nbsp; Security Commands</button>
                     
-                        <button onclick="active(this)" id="CategoryBtn3" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-crown ttt'></i>&nbsp;&nbsp; Premium Commands</button>
+                        <button onclick="active(this)" id="CategoryBtn3" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-crown ttt'></i>&nbsp;&nbsp; Setup Commands</button>
                     
                 </div>
             </div>
@@ -70,7 +70,7 @@
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="flush-headingOne">
                                         <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fban">
-                                             /setup-wizard&nbsp; <span class="command-descreption">- Setup all necessary info for the bot to work</span>
+                                             /mod-panel&nbsp; <span class="command-descreption">- A panel for admins to execute any action on a user</span>
                                         </button>
                                     </h2>
                                     <div id="fban" class="accordion-collapse collapse" data-bs-parent="#ban">
@@ -78,7 +78,7 @@
                                             <span>Usage Examples:</span> <br />
                                             <span class="examples">
                                                 
-                                                    /ban @memebr<br>
+                                                    /mod-panel @user<br>
                                                 
                                             </span>
                                         </div>
@@ -91,7 +91,7 @@
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="flush-headingOne">
                                         <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fkick">
-                                             /kick&nbsp; <span class="command-descreption">- kick a member</span>
+                                             /link-whitelist&nbsp; <span class="command-descreption">- Add/remove a link to whitelist</span>
                                         </button>
                                     </h2>
                                     <div id="fkick" class="accordion-collapse collapse" data-bs-parent="#kick">
@@ -99,7 +99,7 @@
                                             <span>Usage Examples:</span> <br />
                                             <span class="examples">
                                                 
-                                                    /kick @memebr
+                                                    /link-whitelist link
                                                 
                                             </span>
                                         </div>
@@ -112,7 +112,7 @@
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="flush-headingOne">
                                         <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fmute">
-                                             /mute&nbsp; <span class="command-descreption">- mute a member</span>
+                                             /dashboard&nbsp; <span class="command-descreption">- Get the server stats and info</span>
                                         </button>
                                     </h2>
                                     <div id="fmute" class="accordion-collapse collapse" data-bs-parent="#mute">
@@ -120,7 +120,27 @@
                                             <span>Usage Examples:</span> <br />
                                             <span class="examples">
                                                 
-                                                    /mute @member
+                                                    /dashboard
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="mute">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fmute">
+                                             /lock-unlock&nbsp; <span class="command-descreption">- Lock or unlock this channel</span>
+                                        </button>
+                                    </h2>
+                                    <div id="fmute" class="accordion-collapse collapse" data-bs-parent="#mute">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /lock-unlock channel action
                                                 
                                             </span>
                                         </div>
@@ -195,6 +215,27 @@
                                     </div>
                                 </div>
                             </div>
+
+
+                           <div class="accordion accordion-flush mt-2" id="invite">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#finvite">
+                                             /user-lookup&nbsp; <span class="command-descreption">- Get information on any user</span>
+                                        </button>
+                                    </h2>
+                                    <div id="finvite" class="accordion-collapse collapse" data-bs-parent="#invite">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /user-lookup user-id
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         
                     </div>
                 
@@ -206,7 +247,7 @@
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="flush-headingOne">
                                         <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fleaderboard">
-                                             /leaderboard&nbsp; <span class="command-descreption">- Get your servers leaderboards </span>
+                                             /lockdown&nbsp; <span class="command-descreption">- Emergency lockdown your server </span>
                                         </button>
                                     </h2>
                                     <div id="fleaderboard" class="accordion-collapse collapse" data-bs-parent="#leaderboard">
@@ -214,7 +255,27 @@
                                             <span>Usage Examples:</span> <br />
                                             <span class="examples">
                                                 
-                                                    /leaderboard
+                                                    /lockdown
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="leaderboard">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fleaderboard">
+                                             /scan-server&nbsp; <span class="command-descreption">- Scan your server for scammers we have in database </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fleaderboard" class="accordion-collapse collapse" data-bs-parent="#leaderboard">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /scan-server
                                                 
                                             </span>
                                         </div>
@@ -228,19 +289,19 @@
                     <div class="commands-section" id="Category3">
                         
                             
-                            <div class="accordion accordion-flush mt-2" id="reactionrole">
+                            <div class="accordion accordion-flush mt-2" id="leaderboard">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="flush-headingOne">
-                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#freactionrole">
-                                            <span class='badge badge-vip rounded-pill'><i class='far fa-crown'></i></span>&nbsp; /reactionrole&nbsp; <span class="command-descreption">- start the setup process for creating a reaction role</span>
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fleaderboard">
+                                             /verification-setup&nbsp; <span class="command-descreption">- Setup verification system </span>
                                         </button>
                                     </h2>
-                                    <div id="freactionrole" class="accordion-collapse collapse" data-bs-parent="#reactionrole">
+                                    <div id="fleaderboard" class="accordion-collapse collapse" data-bs-parent="#leaderboard">
                                         <div class="accordion-body">
                                             <span>Usage Examples:</span> <br />
                                             <span class="examples">
                                                 
-                                                    /reactionrole
+                                                    /verification-setup verifyrole type channel
                                                 
                                             </span>
                                         </div>
@@ -249,19 +310,79 @@
                             </div>
                         
                             
-                            <div class="accordion accordion-flush mt-2" id="slowmode">
+                            <div class="accordion accordion-flush mt-2" id="leaderboard">
                                 <div class="accordion-item">
                                     <h2 class="accordion-header" id="flush-headingOne">
-                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fslowmode">
-                                            <span class='badge badge-vip rounded-pill'><i class='far fa-crown'></i></span>&nbsp; /slowmode&nbsp; <span class="command-descreption">- add slowmode for a channel</span>
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fleaderboard">
+                                             /welcomer-setup&nbsp; <span class="command-descreption">- Set up welcome messages </span>
                                         </button>
                                     </h2>
-                                    <div id="fslowmode" class="accordion-collapse collapse" data-bs-parent="#slowmode">
+                                    <div id="fleaderboard" class="accordion-collapse collapse" data-bs-parent="#leaderboard">
                                         <div class="accordion-body">
                                             <span>Usage Examples:</span> <br />
                                             <span class="examples">
                                                 
-                                                    /slowmode :time
+                                                    /welcomer-setup channel
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="leaderboard">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fleaderboard">
+                                             /ticketsystem-setup&nbsp; <span class="command-descreption">- Setup tickets </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fleaderboard" class="accordion-collapse collapse" data-bs-parent="#leaderboard">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /ticketsystem-setup channel category
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="leaderboard">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fleaderboard">
+                                             /counting-setup&nbsp; <span class="command-descreption">- Setup a channel for users to count </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fleaderboard" class="accordion-collapse collapse" data-bs-parent="#leaderboard">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /counting-setup channel
+                                                
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="leaderboard">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fleaderboard">
+                                             /autorole-setup&nbsp; <span class="command-descreption">- Set a role that will be automatically given to new users </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fleaderboard" class="accordion-collapse collapse" data-bs-parent="#leaderboard">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                                
+                                                    /autorole-setup role type
                                                 
                                             </span>
                                         </div>
