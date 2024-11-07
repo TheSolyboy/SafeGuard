@@ -55,6 +55,8 @@
                     
                         <button onclick="active(this)" id="CategoryBtn3" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-crown ttt'></i>&nbsp;&nbsp; Setup Commands</button>
 
+                        <button onclick="active(this)" id="CategoryBtn5" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-crown ttt'></i>&nbsp;&nbsp; Fun Commands</button>
+
                         <button onclick="active(this)" id="CategoryBtn4" class="text-decoration-none btn btn-primary mt-2 my-1 p-2"><i class='fas fas fa-crown ttt'></i>&nbsp;&nbsp; Other Commands</button>
                     
                 </div>
@@ -418,6 +420,49 @@
                             </div>
                         
                     </div>
+                    <div class="commands-section" id="Category5"></div>
+
+                            <div class="accordion accordion-flush mt-2" id="leaderboard">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fleaderboard">
+                                            /counting-save&nbsp; <span class="command-descreption">- Setup verification system </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fleaderboard" class="accordion-collapse collapse" data-bs-parent="#leaderboard">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                        
+                                                    /counting-save
+                                        
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion accordion-flush mt-2" id="leaderboard">
+                                <div class="accordion-item">
+                                    <h2 class="accordion-header" id="flush-headingOne">
+                                        <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#fleaderboard">
+                                            /counting-leaderboard&nbsp; <span class="command-descreption">- Setup verification system </span>
+                                        </button>
+                                    </h2>
+                                    <div id="fleaderboard" class="accordion-collapse collapse" data-bs-parent="#leaderboard">
+                                        <div class="accordion-body">
+                                            <span>Usage Examples:</span> <br />
+                                            <span class="examples">
+                                        
+                                                    /counting-leaderboard
+                                        
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                            
                 
             </div>
         </div>
@@ -442,6 +487,12 @@
             
                 document.getElementById("CategoryBtn3").classList.remove("active");
                 document.getElementById("Category3").setAttribute("hidden", "");
+
+                document.getElementById("CategoryBtn4").classList.remove("active");
+                document.getElementById("Category4").setAttribute("hidden", "");
+
+                document.getElementById("CategoryBtn5").classList.remove("active");
+                document.getElementById("Category5").setAttribute("hidden", "");
             
             elm.classList.add("active");
             if(elm.id.replace("CategoryBtn", "") == "All"){
@@ -453,6 +504,10 @@
                     document.getElementById("Category2").removeAttribute("hidden");
                 
                     document.getElementById("Category3").removeAttribute("hidden");
+
+                    document.getElementById("Category4").removeAttribute("hidden");
+
+                    document.getElementById("Category5").removeAttribute("hidden");
                 
             }else{
                 document.getElementById("Category" + elm.id.replace("CategoryBtn", "")).removeAttribute("hidden");
