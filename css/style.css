@@ -172,6 +172,7 @@ body.on {
 	font-weight: bold;
 	text-align: right;
 	width: 100%;
+	text-align: left;
 }
 
 .jumbotron-item .jumbotron-d {
@@ -187,6 +188,7 @@ body.on {
 .jumbotron-item .jumbotron-buttons button {
 	margin: 10px 5px;
 }
+
 /* jumbotron end */
 
 /* features */
@@ -194,6 +196,9 @@ body.on {
 	font-size: 30px;
 	text-align: center;
 	margin-bottom: 25px;
+	font-family: 'Courier New', Courier, monospace;
+	
+	
 }
 
 .features-box .features-t::after {
@@ -212,6 +217,7 @@ body.on {
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+	
 }
 
 
@@ -430,3 +436,46 @@ body.on {
 		transform: translateY(0px);
 	}
 }
+
+
+h2{
+	font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+
+
+.jumbotron-t {
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+
+}
+
+jumbotron-item {
+background-color: #111;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+padding-left: 0%;
+
+
+}
+
+.jumbotron-t span {
+	
+
+font-family:Georgia, 'Times New Roman', Times, serif ;
+display: inline-block;
+font-size: 40px;
+color: #fff;
+animation: flip 2s infinite;
+animation-delay: calc(.2s * var(--i))
+}
+@keyframes flip {
+0%,80% {
+transform: rotateY(360deg) 
+}
+}
+
+
