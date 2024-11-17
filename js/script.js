@@ -34,3 +34,29 @@ window.onload = () => {
 		body.classList.remove("on")
 	}, 1510);
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+	const elements = document.querySelectorAll("#slide-left-to-right, #slide-right-to-left");
+  
+	const isInViewport = (el) => {
+	  const rect = el.getBoundingClientRect();
+	  return (
+		rect.top >= 0 &&
+		rect.left >= 0 &&
+		rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+		rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+	  );
+	};
+  
+	const handleScroll = () => {
+	  elements.forEach((el) => {
+		if (isInViewport(el)) {
+		  el.classList.add("active");
+		}
+	  });
+	};
+  
+	window.addEventListener("scroll", handleScroll);
+	handleScroll(); // Trigger for elements already in the viewport
+  });
+  
